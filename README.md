@@ -1,261 +1,199 @@
+<div align="center">
+
 # 🏗️ AI-VIBE-WEBSITE-BUILDER-V1
 
-<p align="center">
-  <img src="https://img.shields.io/badge/AI--VIBE-WEBSITE--BUILDER--V1-black?style=for-the-badge&logo=next.js&logoColor=white" alt="AI Vibe Project">
-  <br>
-  <b>Build stunning websites with AI in seconds using real-time streaming.</b>
-</p>
+### **Real-Time AI Website Builder**
+*Next.js 15 · Clerk Auth · Prisma ORM · tRPC · E2B · Multi-LLM Streaming*
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-3.0.0-blue.svg" alt="Version">
-  <img src="https://img.shields.io/badge/Next.js-15.1.3-black.svg?logo=next.js&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/React-19.0.0-blue.svg?logo=react&logoColor=white" alt="React">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
-</p>
+[![Next.js](https://img.shields.io/badge/Next.js-15.0+-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Clerk](https://img.shields.io/badge/Clerk-Auth-6C47FF?style=for-the-badge)](https://clerk.com)
+[![Prisma](https://img.shields.io/badge/Prisma-6.0+-2D3748?style=for-the-badge&logo=prisma)](https://prisma.io)
+[![tRPC](https://img.shields.io/badge/tRPC-11.0+-2596BE?style=for-the-badge)](https://trpc.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
----
+**[🚀 Live Demo](https://ai-vibe-builder-v1.vercel.app)** · **[📖 Docs](#documentation)** · **[⭐ Star](https://github.com/mk-knight23/AI-VIBE-WEBSITE-BUILDER-V1)**
 
-> **Version 3.0.0** - Complete architecture overhaul with 4 AI providers, real-time streaming, and modern tech stack.
+</div>
 
 ---
 
-## 🗺️ Quick Navigation
+## 🎯 Build Websites With Natural Language
 
-- [🚀 Quick Start](#-quick-start)
-- [✨ Features](#-features)
-- [📦 Installation](#-installation)
-- [🔌 AI Providers](#-ai-providers)
-- [🎯 How It Works](#-how-it-works)
-- [🏗️ Architecture](#%EF%B8%8F-architecture)
-- [🔒 Security](#-security)
-- [🌐 Deployment](#-deployment)
+AI-VIBE-WEBSITE-BUILDER-V1 turns your text descriptions into production-ready websites — in real-time. Describe what you want, watch the code stream in, and see your site rendered live. Full auth, project management, and export.
 
----
-
-## 🛠️ Engineered With
-
-<p align="left">
-  <a href="https://nextjs.org"><img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js"></a>
-  <a href="https://react.dev"><img src="https://skillicons.dev/icons?i=react" alt="React"></a>
-  <a href="https://prisma.io"><img src="https://skillicons.dev/icons?i=prisma" alt="Prisma"></a>
-  <a href="https://postgresql.org"><img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL"></a>
-  <a href="https://tailwindcss.com"><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS"></a>
-  <a href="https://clerk.com"><img src="https://img.shields.io/badge/Auth-Clerk-6C47FF" alt="Clerk"></a>
-</p>
-
----
-
-## 🚀 Quick Start
-
-For a detailed local setup guide, see [RUN_GUIDE.md](RUN_GUIDE.md).
-
-```bash
-npm install
-npm run dev
-# Open http://localhost:3000
-```
+> **Pillar 3, Iteration 1** — The foundation of AI-powered web creation.
 
 ---
 
 ## ✨ Features
 
-- 🤖 **4 AI Providers** - OpenRouter, Routeway, MegaLLM, AgentRouter
-- 🆓 **Free Models** - Multiple free options available
-- ⚡ **Real-time Streaming** - Watch your website build live
-- 🎨 **Modern UI** - Clean, responsive interface
-- 🔒 **Secure** - API keys stored locally in browser
-- 📱 **Mobile Friendly** - Works on all devices
-
----
-
-## 📦 Installation
-
-### Prerequisites
-- Node.js 18+
-- PostgreSQL database
-
-### Setup
-
-1. **Clone and install**
-```bash
-git clone <repository-url>
-cd vibe-main
-npm install
-```
-
-2. **Configure environment**
-```bash
-cp .env.example .env.local
-```
-
-Edit `.env.local`:
-```env
-# Database
-DATABASE_URL='postgresql://user:password@localhost:5432/vibe'
-
-# Clerk Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
-CLERK_SECRET_KEY=sk_test_...
-
-# E2B Sandbox
-E2B_API_KEY=e2b_...
-```
-
-3. **Setup database**
-```bash
-npx prisma migrate dev
-```
-
-4. **Start development**
-```bash
-npm run dev
-```
-
----
-
-## 🔌 AI Providers
-
-Configure API keys in the Settings dialog (⚙️) in the app.
-
-### OpenRouter (Free)
-- **Website:** https://openrouter.ai
-- **Free Models:** Grok, DeepSeek, Qwen, Gemini
-
-### Routeway (Free)
-- **Website:** https://routeway.ai
-- **Free Models:** Kimi, GLM, DeepSeek, Llama
-
-### MegaLLM (Paid)
-- **Website:** https://megallm.io
-- **Models:** Llama, Qwen, DeepSeek
-
-### AgentRouter
-- **Website:** https://agentrouter.org
-- **Models:** GLM, DeepSeek, Claude
-
----
-
-## 🎯 How It Works
-
-1. **Sign in** to the app
-2. **Configure API key** in Settings (⚙️)
-3. **Describe your website** in the input
-4. **Watch it build** in real-time
-5. **Preview instantly** when complete
-
----
-
-## 📁 Project Structure
-
-<details>
-<summary>View Detailed Directory Map</summary>
-
-```
-vibe-main/
-├── src/
-│   ├── app/              # Next.js app routes
-│   │   ├── (home)/       # Home pages
-│   │   ├── projects/     # Project pages
-│   │   └── api/          # API routes
-│   ├── components/       # Reusable components
-│   ├── lib/              # Core utilities
-│   ├── modules/          # Feature modules
-│   ├── hooks/            # Custom React hooks
-│   └── trpc/             # tRPC API layer
-├── prisma/               # Database schema
-└── public/               # Static assets
-```
-</details>
-
+| Feature | Status | Description |
+|---------|--------|-------------|
+| 💬 **Natural Language Input** | ✅ | Describe your site in plain English |
+| 🌊 **Real-Time Streaming** | ✅ | See code generated token-by-token |
+| 👁️ **Live Preview** | ✅ | Instant browser preview alongside code |
+| 🔐 **Clerk Authentication** | ✅ | Social login, magic links, MFA |
+| 💾 **Project Persistence** | ✅ | Prisma + PostgreSQL, unlimited projects |
+| 🔄 **Iteration Loop** | ✅ | "Make the header blue" → instant update |
+| 📤 **Export Code** | ✅ | Download clean HTML/CSS/JS |
+| 🤖 **Multi-LLM** | ✅ | Claude, GPT-4o, Gemini routing |
+| 🛡️ **E2B Sandbox** | ✅ | Code executes in isolated container |
+| 🎨 **Template Library** | ✅ | 20+ starter templates |
 
 ---
 
 ## 🏗️ Architecture
 
-### Real-Time Streaming
-- **API Route:** `/api/generate` - Server-Sent Events streaming
-- **Hook:** `useGenerateStream` - React hook for streaming
-- **Component:** `AutoGenerator` - Auto-starts generation
-
-### Tech Stack
-- **Framework:** Next.js 14 (App Router)
-- **Database:** PostgreSQL + Prisma
-- **Auth:** Clerk
-- **Sandbox:** E2B Code Interpreter
-- **Styling:** Tailwind CSS
-- **API:** tRPC
-- **UI:** Radix UI + shadcn/ui
+```
+src/
+├── app/
+│   ├── layout.tsx               # ClerkProvider + tRPC Provider
+│   ├── page.tsx                 # Landing page
+│   ├── dashboard/page.tsx       # Project dashboard
+│   └── project/[id]/page.tsx    # Builder interface
+├── modules/
+│   └── projects/
+│       ├── server/
+│       │   └── procedures.ts    # tRPC router (create, update, stream)
+│       └── ui/
+│           ├── components/
+│           │   ├── auto-generator.tsx    # LLM streaming orchestrator
+│           │   ├── message-form.tsx      # Chat input with file upload
+│           │   ├── fragment-web.tsx      # Sandboxed preview iframe
+│           │   ├── messages-container.tsx # Conversation history
+│           │   ├── generation-preview.tsx # Code + preview split view
+│           │   └── project-header.tsx    # Title, share, export
+│           └── views/
+│               ├── BuilderView.tsx       # Main builder layout
+│               └── ProjectsView.tsx      # Dashboard grid
+├── server/
+│   ├── trpc.ts                  # tRPC initialization
+│   ├── routers/
+│   │   ├── projects.ts          # Project CRUD
+│   │   └── generation.ts        # AI generation endpoints
+│   └── providers/
+│       ├── anthropic.ts         # Claude streaming
+│       ├── openai.ts            # GPT-4o streaming
+│       └── gemini.ts            # Gemini streaming
+└── prisma/
+    └── schema.prisma            # User, Project, Message, Fragment
+```
 
 ---
 
-## 🔒 Security
+## 🌊 Streaming Architecture
 
-- ✅ API keys stored locally (browser localStorage)
-- ✅ Authentication required (Clerk)
-- ✅ Rate limiting (5 projects/min)
-- ✅ Input sanitization
-- ✅ CSRF protection
+The builder uses **Server-Sent Events** for real-time code streaming:
+
+```typescript
+// server/providers/anthropic.ts
+export async function streamWebsite(
+  prompt: string,
+  context: BuildContext,
+  onChunk: (chunk: string) => void
+) {
+  const stream = await anthropic.messages.stream({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 8192,
+    system: WEBSITE_BUILDER_SYSTEM_PROMPT,
+    messages: [{ role: 'user', content: buildPrompt(prompt, context) }]
+  })
+
+  for await (const chunk of stream) {
+    if (chunk.type === 'content_block_delta') {
+      onChunk(chunk.delta.text)
+    }
+  }
+}
+```
 
 ---
 
-## 🚀 Deployment
+## 🗄️ Database Schema
 
-### Vercel (Recommended)
+```prisma
+model Project {
+  id          String     @id @default(cuid())
+  userId      String
+  name        String
+  description String?
+  messages    Message[]
+  fragments   Fragment[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  user        User       @relation(fields: [userId], references: [id])
+}
+
+model Fragment {
+  id          String  @id @default(cuid())
+  projectId   String
+  html        String  @db.Text
+  css         String  @db.Text
+  javascript  String  @db.Text
+  iteration   Int     @default(1)
+  isActive    Boolean @default(true)
+  project     Project @relation(fields: [projectId], references: [id])
+}
+```
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-npm run build
-vercel deploy
+git clone https://github.com/mk-knight23/AI-VIBE-WEBSITE-BUILDER-V1.git
+cd AI-VIBE-WEBSITE-BUILDER-V1
+npm install
+cp .env.example .env.local
 ```
 
 ### Environment Variables
 
-Set these in your deployment platform:
-- `DATABASE_URL`
-- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
-- `CLERK_SECRET_KEY`
-- `E2B_API_KEY`
+```env
+# Auth
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
+CLERK_SECRET_KEY=sk_...
+
+# Database
+DATABASE_URL=postgresql://user:pass@host:5432/vibe
+
+# AI Providers
+ANTHROPIC_API_KEY=sk-ant-...
+OPENAI_API_KEY=sk-...
+GOOGLE_AI_API_KEY=...
+
+# E2B Sandbox
+E2B_API_KEY=e2b_...
+
+# App
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+```bash
+npx prisma migrate dev     # Run migrations
+npm run dev                # → http://localhost:3000
+```
 
 ---
 
-## 📚 API Routes
+## 📦 Commands
 
-- `POST /api/generate` - Generate website with streaming
-- `POST /api/validate-key` - Validate AI provider API key
-- `/api/trpc/*` - tRPC API endpoints
-
----
-
-## 🤝 Contributing & Support
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
-- **Issues:** Open a GitHub issue
-- **Docs:** Comprehensive documentation is available in the [`docs/`](docs/) folder.
+```bash
+npm run dev          # Next.js Turbopack dev
+npm run build        # Production build
+npm run start        # Production server
+npx prisma studio    # Database GUI
+npx prisma migrate   # Run migrations
+npm run lint         # ESLint
+npm run type-check   # TypeScript check
+```
 
 ---
 
-## 📄 License
+<div align="center">
 
-MIT License - see LICENSE file for details.
+**Built with 🏗️ by [Kazi Musharraf](https://mkazi.live)**
 
----
+*Part of the [AI-VIBE Ecosystem](https://github.com/mk-knight23/AI-VIBE-ECOSYSTEM) · Built in India 🇮🇳*
 
-<p align="center">
-  <i>AI-VIBE-WEBSITE-BUILDER-V1 - Version 3.0.0 | Production Ready ✅</i>
-</p>
-
-
-## 🎯 Problem Solved
-
-This repository provides a streamlined approach to modern development needs, enabling developers to build robust applications with minimal complexity and maximum efficiency.
-
-## 🌐 Deployment
-
-### Live URLs
-
-| Platform | URL |
-|----------|-----|
-| Vercel | [Deployed Link] |
-| GitHub Pages | [Deployed Link] |
+</div>
